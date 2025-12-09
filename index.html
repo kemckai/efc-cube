@@ -889,11 +889,9 @@
                         roughness: 0.15
                     });
                     
-                    // Photo material for the front face
-                    const photoMaterial = new THREE.MeshStandardMaterial({ 
-                        map: texture,
-                        metalness: 0.1,
-                        roughness: 0.6
+                    // Photo material for the front face - using BasicMaterial for clarity
+                    const photoMaterial = new THREE.MeshBasicMaterial({ 
+                        map: texture
                     });
                     
                     // Dark metallic for back
@@ -983,10 +981,8 @@
                     if (item.photo) {
                         // Load photo for vinyl (using cache)
                         const texture = this.loadTexture(item.photo);
-                        frontMaterial = new THREE.MeshStandardMaterial({ 
-                            map: texture,
-                            metalness: 0.1,
-                            roughness: 0.6
+                        frontMaterial = new THREE.MeshBasicMaterial({ 
+                            map: texture
                         });
                     } else {
                         // Create canvas for text items
@@ -1078,10 +1074,8 @@
                         roughness: 0.15
                     });
                     
-                    const photoMaterial = new THREE.MeshStandardMaterial({ 
-                        map: texture,
-                        metalness: 0.1,
-                        roughness: 0.6
+                    const photoMaterial = new THREE.MeshBasicMaterial({ 
+                        map: texture
                     });
                     
                     const backMaterial = new THREE.MeshStandardMaterial({ 
@@ -1132,10 +1126,8 @@
                     roughness: 0.15
                 });
                 
-                const keithPhotoMaterial = new THREE.MeshStandardMaterial({ 
-                    map: keithTexture,
-                    metalness: 0.1,
-                    roughness: 0.6
+                const keithPhotoMaterial = new THREE.MeshBasicMaterial({ 
+                    map: keithTexture
                 });
                 
                 const backMaterial = new THREE.MeshStandardMaterial({ 
@@ -1167,10 +1159,8 @@
                 const jordanGeometry = new THREE.BoxGeometry(photoSize, photoSize, extrusionDepth);
                 const jordanTexture = this.loadTexture('images/Bass.jpg');
                 
-                const jordanPhotoMaterial = new THREE.MeshStandardMaterial({ 
-                    map: jordanTexture,
-                    metalness: 0.1,
-                    roughness: 0.6
+                const jordanPhotoMaterial = new THREE.MeshBasicMaterial({ 
+                    map: jordanTexture
                 });
                 
                 const jordanMaterials = [
@@ -1196,10 +1186,8 @@
                 const taylorGeometry = new THREE.BoxGeometry(photoSize, photoSize, extrusionDepth);
                 const taylorTexture = this.loadTexture('images/drum.jpeg');
                 
-                const taylorPhotoMaterial = new THREE.MeshStandardMaterial({ 
-                    map: taylorTexture,
-                    metalness: 0.1,
-                    roughness: 0.6
+                const taylorPhotoMaterial = new THREE.MeshBasicMaterial({ 
+                    map: taylorTexture
                 });
                 
                 const taylorMaterials = [
@@ -1267,10 +1255,8 @@
                     if (item.photo) {
                         // Load photo for music video (using cache)
                         const texture = this.loadTexture(item.photo);
-                        frontMaterial = new THREE.MeshStandardMaterial({ 
-                            map: texture,
-                            metalness: 0.1,
-                            roughness: 0.6
+                        frontMaterial = new THREE.MeshBasicMaterial({ 
+                            map: texture
                         });
                     } else {
                         // Create canvas for text items
